@@ -1,10 +1,11 @@
 import request
+import sys
 from draw import draw_image
 from PIL import Image
-import sys
 
 class Face:
 	""" Class Face. Contains a rectangle and a gender """
+
 	def __init__(self, gender, width, height):
 		self.width = width
 		self.height = height
@@ -12,6 +13,7 @@ class Face:
 
 def __is_image(path):
 	""" Check if given path is a image """
+
 	try:
 		test = Image.open(path)
 		test.close()

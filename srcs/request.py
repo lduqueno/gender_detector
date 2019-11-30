@@ -1,15 +1,14 @@
 import requests
 import base64
 import sys
+import os
+from config import *
 from main import Face
 
 API_URL = "https://api-us.faceplusplus.com/facepp/v3/detect"
-API_KEY = ""
-API_SECRET = "ZDdmfjT_HzoHevHBL2x-ZHkb_LliXJ0Jg"
 
 def __parse_face(json_element):
 	""" Given a JSON String, extract informations and parse into Face object """
-
 
 	if json_element is None or "attributes" not in json_element:
 		return None
@@ -22,6 +21,9 @@ def __parse_face(json_element):
 def request_faces(image_raw):
 	""" Request Face++ API and return a list of Face """
 
+	if API_KEY is "YOUR_KEY":
+		print("You need to add your API access into srcs/config.py first!")
+		sys.exit(0)
 	image_base64 = base64.b64encode(image_raw.read())
 	payload = {
 		'api_key': API_KEY,
