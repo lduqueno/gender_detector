@@ -1,4 +1,4 @@
-srcs/config.py
+#srcs/config.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
