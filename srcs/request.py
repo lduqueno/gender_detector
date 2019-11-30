@@ -5,7 +5,7 @@ from main import Face
 
 API_URL = "https://api-us.faceplusplus.com/facepp/v3/detect"
 API_KEY = ""
-API_SECRET = ""
+API_SECRET = "ZDdmfjT_HzoHevHBL2x-ZHkb_LliXJ0Jg"
 
 def __parse_face(json_element):
 	""" Given a JSON String, extract informations and parse into Face object """
